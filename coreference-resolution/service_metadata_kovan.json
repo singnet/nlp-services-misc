@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "display_name": "coreference-resolution-service",
+    "encoding": "proto",
+    "service_type": "grpc",
+    "payment_expiration_threshold": 40320,
+    "model_ipfs_hash": "QmVM1CBuwQhN8aH7XtfGNMjSN11Bhh75FCcQ3rKxaH4qgU",
+    "mpe_address": "0x39f31Ac7B393fE2C6660b95b878FEB16eA8f3156",
+    "pricing": {
+        "price_model": "fixed_price",
+        "price_in_cogs": 1
+    },
+    "groups": [
+        {
+            "group_name": "default_group",
+            "group_id": "Oqh+TejAMkuMO8pFojZyZ4VHq/DEIpBZz7CSQsDyt4Q=",
+            "payment_address": "0xd708A068F606893120eA34eECe8a2f7448Fca764"
+        }
+    ],
+    "endpoints": [
+        {
+            "group_name": "default_group",
+            "endpoint": "http://159.69.56.49:8007"
+        }
+    ],
+    "service_description": {
+        "description": "Coreference resolution is the task of finding all expressions that refer to the same entity in a text. It is an \nimportant step for a lot of higher level NLP tasks that involve natural language understanding such as document\nsummarization, question answering, and information extraction."
+    }
+}

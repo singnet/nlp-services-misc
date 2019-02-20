@@ -1,0 +1,26 @@
+{
+    "version": 1,
+    "display_name": "named-entity-disambiguation",
+    "encoding": "proto",
+    "service_type": "grpc",
+    "payment_expiration_threshold": 40320,
+    "model_ipfs_hash": "QmNt5tKZakHVsqxuridguhppmuyPvsoTZcthpP1pkU1r21",
+    "mpe_address": "0x39f31Ac7B393fE2C6660b95b878FEB16eA8f3156",
+    "pricing": {},
+    "groups": [
+        {
+            "group_name": "default_group",
+            "group_id": "D9w3Nzz+iffalEurbTU4Q9cgDP2Vc+cfY8jyw5ExA6M=",
+            "payment_address": "0xd708A068F606893120eA34eECe8a2f7448Fca764"
+        }
+    ],
+    "endpoints": [
+        {
+            "group_name": "default_group",
+            "endpoint": "http://159.69.56.49:8005"
+        }
+    ],
+    "service_description": {
+        "description": "This service provides named entity disambiguation for named entities identified in a sentence using wikipedia dumps"
+    }
+}

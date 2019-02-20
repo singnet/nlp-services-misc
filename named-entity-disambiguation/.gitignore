@@ -1,0 +1,13 @@
+*.tql
+__pycache__/
+*.py[cod]
+*$py.class
+
+*_pb2.py
+*_pb2_grpc.py
+
+*.jpg
+*.jpeg
+*.png
+*.gif
+snetd*

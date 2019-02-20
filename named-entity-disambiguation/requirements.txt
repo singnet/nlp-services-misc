@@ -1,0 +1,7 @@
+nltk==3.3
+numpy==1.15.4
+spacy==2.0.18
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.0.0/en_core_web_sm-2.0.0.tar.gz#en_core_web_sm
+protobuf
+grpcio
+grpcio-tools

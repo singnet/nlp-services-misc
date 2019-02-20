@@ -1,0 +1,4 @@
+git+https://github.com/aboSamoor/polyglot.git@master
+protobuf
+grpcio
+grpcio-tools
