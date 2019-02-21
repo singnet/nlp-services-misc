@@ -22,12 +22,12 @@ class DictionaryCreator:
         for filename in self.path:
             with open(filename, 'rt', encoding='utf-8') as f:
                 contents = f.read()
-                if filename == 'disambiguation_en.tql':
+                if filename == 'data/disambiguation_en.tql':
                     print('processing disambigution file')
                     contents = (contents.replace("<http://dbpedia.org/ontology/wikiPageDisambiguates>", ''))
                     save_file = "output/disambiguate_offline_dict.p"
 
-                elif filename == 'redirects_en.tql':
+                elif filename == 'data/redirects_en.tql':
                     print('processing redirects file')
                     contents = (contents.replace("<http://dbpedia.org/ontology/wikiPageRedirects>", ''))
                     save_file == 'output/redirect_offline_dict.p'
