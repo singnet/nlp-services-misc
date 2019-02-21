@@ -30,7 +30,7 @@ class DictionaryCreator:
                 elif filename == 'data/redirects_en.tql':
                     print('processing redirects file')
                     contents = (contents.replace("<http://dbpedia.org/ontology/wikiPageRedirects>", ''))
-                    save_file == 'output/redirect_offline_dict.p'
+                    save_file = 'output/redirect_offline_dict.p'
 
                 else:
                     print('it skips the file ' + filename)
