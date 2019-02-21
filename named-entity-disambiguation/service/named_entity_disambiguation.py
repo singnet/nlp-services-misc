@@ -13,6 +13,7 @@ class NamedEntityDisambiguation:
         self.nlp = spacy.load('en_core_web_sm')
         self.logger = logging
         self.offline_dic = {}
+        self.text = ''
         try:
             with open('output/disambiguate_offline_dict.p', 'rb') as f:
                 self.offline_dic.update(pickle.load(f))
@@ -23,8 +24,8 @@ class NamedEntityDisambiguation:
 
     def named_entity_disambiguation(self, text):
         named_entities, _big_final_dict = self._candidate_generation()
-        entities = []
         self.text = text
+        entities = []
         if _big_final_dict is not None:
             entities = self._candidate_ranking(_big_final_dict)
 
@@ -170,7 +171,7 @@ class NamedEntityDisambiguation:
 
 
 if __name__ == '__main__':
-    NED = NamedEntityDisambiguation(text="Silicon Valley is a great series. So was The Big Bang Theory.")
+    NED = NamedEntityDisambiguation()
     named_entities, big_final_dict = NED._candidate_generation()
     print(named_entities)
     if big_final_dict is not None:
