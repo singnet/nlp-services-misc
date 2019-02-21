@@ -22,7 +22,7 @@ class DictionaryCreator:
         for filename in self.path:
             with open(filename, 'rt', encoding='utf-8') as f:
                 contents = f.read()
-                if filename == 'data/disambiguation_en.tql':
+                if filename == 'data/disambiguations_en.tql':
                     print('processing disambigution file')
                     contents = (contents.replace("<http://dbpedia.org/ontology/wikiPageDisambiguates>", ''))
                     save_file = "output/disambiguate_offline_dict.p"
