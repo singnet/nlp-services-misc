@@ -24,6 +24,7 @@
         }
     ],
     "service_description": {
-        "description": "Coreference resolution is the task of finding all expressions that refer to the same entity in a text. It is an \nimportant step for a lot of higher level NLP tasks that involve natural language understanding such as document\nsummarization, question answering, and information extraction."
+        "description": "Coreference resolution is the task of finding all expressions that refer to the same entity in a text. It is an \nimportant step for a lot of higher level NLP tasks that involve natural language understanding such as document\nsummarization, question answering, and information extraction.",
+        "url": "https://singnet.github.io/nlp-services-misc/users_guide/coreference-resolution-service.html"
     }
 }
