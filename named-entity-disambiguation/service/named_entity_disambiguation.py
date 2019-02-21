@@ -13,9 +13,12 @@ class NamedEntityDisambiguation:
         self.nlp = spacy.load('en_core_web_sm')
         self.text = text
         self.logger = logging
+        self.offline_dic = {}
         try:
             with open('output/disambiguate_offline_dict.p', 'rb') as f:
-                self.offline_dic = pickle.load(f)
+                self.offline_dic.update(pickle.load(f))
+            with open('output/redirect_offline_dict.p', 'rb') as f:
+                self.offline_dic.update(pickle.load(f))
         except FileNotFoundError as e:
             self.logger.error('File not found')
 
@@ -26,7 +29,6 @@ class NamedEntityDisambiguation:
             entities = self._candidate_ranking(_big_final_dict)
 
         return named_entities, entities
-
 
     def _candidate_generation(self):
         """
@@ -56,7 +58,7 @@ class NamedEntityDisambiguation:
             named_entity_value = named_entity[1].replace('\n', '')
             named_entity_value_list.append(named_entity_value)
             filtered_words = (str(ent.text).split())
-            filtered_words =[w for w in filtered_words if w.lower() not in self.english_stopwords]
+            filtered_words = [w for w in filtered_words if w.lower() not in self.english_stopwords]
             named_entity_key = [' '.join(filtered_words)]
             for i in named_entity_key:
                 named_entity_key_list.append(i)
@@ -162,7 +164,8 @@ class NamedEntityDisambiguation:
             self.logger.info(
                 'Ambiguous word:' + ranked_entity + '     ' + 'Disambiguation link' + ' ' + 'https://en.wikipedia.org/wiki/' + (
                     ranked_entity).replace(' ', '_'))
-            self.ranked_entities.append([ranked_entity,'https://en.wikipedia.org/wiki/' + (ranked_entity).replace(' ', '_')])
+            self.ranked_entities.append(
+                [ranked_entity, 'https://en.wikipedia.org/wiki/' + (ranked_entity).replace(' ', '_')])
         return self.ranked_entities
 
 
@@ -173,4 +176,3 @@ if __name__ == '__main__':
     if big_final_dict is not None:
         entities = NED._candidate_ranking(big_final_dict)
         print(entities)
-

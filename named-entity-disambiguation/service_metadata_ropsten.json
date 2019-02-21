@@ -6,7 +6,10 @@
     "payment_expiration_threshold": 40320,
     "model_ipfs_hash": "QmNt5tKZakHVsqxuridguhppmuyPvsoTZcthpP1pkU1r21",
     "mpe_address": "0x7E6366Fbe3bdfCE3C906667911FC5237Cc96BD08",
-    "pricing": {},
+    "pricing": {
+        "price_model": "fixed_price",
+        "price_in_cogs": 1
+    },
     "groups": [
         {
             "group_name": "default_group",
@@ -21,6 +24,7 @@
         }
     ],
     "service_description": {
-        "description": "This service provides named entity disambiguation for named entities identified in a sentence using wikipedia dumps"
+        "description": "This service provides named entity disambiguation for named entities identified in a sentence using wikipedia dumps",
+        "url": "https://singnet.github.io/nlp-services-misc/users_guide/named-entity-disambiguation-service.html"
     }
 }

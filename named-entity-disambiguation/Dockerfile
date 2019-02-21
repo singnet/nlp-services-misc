@@ -32,9 +32,13 @@ RUN mkdir -p /tmp/data/kb
 
 RUN wget http://downloads.dbpedia.org/2016-10/core-i18n/en/disambiguations_en.tql.bz2 -P data/kb
 
+RUN wget http://downloads.dbpedia.org/2016-10/core-i18n/en/redirects_en.tql.bz2 -P data/kb
+
 WORKDIR /tmp/data/kb
 
 RUN bzip2 -d disambiguations_en.tql.bz2
+
+RUN bzip2 -d redirects_en.tql.bz2
 
 RUN mkdir -p /named-entity-disambiguation && cp -a /tmp/data/kb /named-entity-disambiguation/data
 
