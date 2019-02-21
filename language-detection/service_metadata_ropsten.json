@@ -5,7 +5,7 @@
     "service_type": "grpc",
     "payment_expiration_threshold": 40320,
     "model_ipfs_hash": "QmWrS9XKQcYboLznNkxbVPwuHmwjcTiaYM6qRS84oV7QBB",
-    "mpe_address": "0x39f31Ac7B393fE2C6660b95b878FEB16eA8f3156",
+    "mpe_address": "0x7E6366Fbe3bdfCE3C906667911FC5237Cc96BD08",
     "pricing": {
         "price_model": "fixed_price",
         "price_in_cogs": 1
