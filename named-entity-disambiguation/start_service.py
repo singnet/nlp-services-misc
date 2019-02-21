@@ -7,9 +7,6 @@ import time
 
 
 class DisambiguateServicer(DisambiguateServicer):
-    def __init__(self):
-        self.disambiguator = NamedEntityDisambiguation()
-
     def named_entity_disambiguation(self, request, context):
         if request.input is None:
             context.set_code(grpc.StatusCode.INVALID_ARGUMENT)
@@ -21,8 +18,9 @@ class DisambiguateServicer(DisambiguateServicer):
             return Output()
 
         response = Output()
+        disambiguate = NamedEntityDisambiguation()
 
-        named_entities, candidates = self.disambiguator.named_entity_disambiguation(request.input)
+        named_entities, candidates = disambiguate.named_entity_disambiguation(request.input)
 
         if not named_entities:
             disambiguation = response.disambiguation.add()
