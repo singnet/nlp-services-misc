@@ -59,7 +59,7 @@ class DictionaryCreator:
 
                 if not os.path.isdir('output/'):
                     os.makedirs('output')
-                with open("", "wb") as f:
+                with open(save_file, "wb") as f:
                     pickle.dump(self.dict, f)
 
 
