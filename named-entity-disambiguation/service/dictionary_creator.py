@@ -12,7 +12,8 @@ class DictionaryCreator:
         self.list_value = []
         self.dict = {}
 
-        self.path = glob.glob('data/kb/*.tql')  # Folder Path
+        self.path = glob.glob('data/*.tql')  # Folder Path
+        print('initialized database creator')
 
     def create_dictionary(self):
         """
@@ -32,6 +33,7 @@ class DictionaryCreator:
                     save_file == 'output/redirect_offline_dict.p'
 
                 else:
+                    print('it skips the file ' + filename)
                     continue
 
                 contents = (contents.replace("<http://en.wikipedia.org/wiki/", ''))
