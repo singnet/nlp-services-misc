@@ -10,9 +10,13 @@ import time
 class ResolveReferenceServicer(ResolveReferenceServicer):
     def resolution(self, request, context):
         if request.sentence is None:
-            raise InvalidParams("Invalid Sentence")
+            context.set_code(grpc.StatusCode.INVALID_ARGUMENT)
+            context.set_details("Sentence is required.")
+            return ReferenceResolution()
         elif request.sentence == '':
-            raise InvalidParams("Empty Sentence")
+            context.set_code(grpc.StatusCode.INVALID_ARGUMENT)
+            context.set_details("Sentence is empty.")
+            return ReferenceResolution()
 
         response = ReferenceResolution()
 

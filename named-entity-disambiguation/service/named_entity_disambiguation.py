@@ -8,10 +8,9 @@ import logging
 
 
 class NamedEntityDisambiguation:
-    def __init__(self, text):
+    def __init__(self):
         self.english_stopwords = stopwords.words('english')
         self.nlp = spacy.load('en_core_web_sm')
-        self.text = text
         self.logger = logging
         self.offline_dic = {}
         try:
@@ -22,9 +21,10 @@ class NamedEntityDisambiguation:
         except FileNotFoundError as e:
             self.logger.error('File not found')
 
-    def named_entity_disambiguation(self):
+    def named_entity_disambiguation(self, text):
         named_entities, _big_final_dict = self._candidate_generation()
         entities = []
+        self.text = text
         if _big_final_dict is not None:
             entities = self._candidate_ranking(_big_final_dict)
 

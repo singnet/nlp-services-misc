@@ -9,9 +9,13 @@ import time
 class LanguageDetectServicer(LanguageDetectServicer):
     def infer(self, request, context):
         if request.input is None:
-            raise InvalidParams("Invalid Sentence")
+            context.set_code(grpc.StatusCode.INVALID_ARGUMENT)
+            context.set_details("Sentence is required.")
+            return Output()
         elif request.input == '':
-            raise InvalidParams("Empty Sentence")
+            context.set_code(grpc.StatusCode.INVALID_ARGUMENT)
+            context.set_details("Sentence is empty.")
+            return Output()
 
         response = Output()
 

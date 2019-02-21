@@ -5,18 +5,24 @@ import grpc
 from concurrent import futures
 import time
 
+
 class DisambiguateServicer(DisambiguateServicer):
+    def __init__(self):
+        self.disambiguator = NamedEntityDisambiguation()
+
     def named_entity_disambiguation(self, request, context):
         if request.input is None:
-            raise InvalidParams("Invalid Sentence")
+            context.set_code(grpc.StatusCode.INVALID_ARGUMENT)
+            context.set_details("Sentence is required.")
+            return Output()
         elif request.input == '':
-            raise InvalidParams("Empty Sentence")
+            context.set_code(grpc.StatusCode.INVALID_ARGUMENT)
+            context.set_details("Sentence is empty.")
+            return Output()
 
         response = Output()
 
-        disambiguator = NamedEntityDisambiguation(request.input)
-
-        named_entities, candidates = disambiguator.named_entity_disambiguation()
+        named_entities, candidates = self.disambiguator.named_entity_disambiguation(request.input)
 
         if not named_entities:
             disambiguation = response.disambiguation.add()
@@ -34,6 +40,7 @@ class DisambiguateServicer(DisambiguateServicer):
                 disambiguation.disambiguation_link = candidate[1]
 
         return response
+
 
 def create_server(port="50051"):
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
