@@ -6,7 +6,7 @@
    "PASSTHROUGH_ENABLED": true,
    "PASSTHROUGH_ENDPOINT": "http://localhost:50051",
    "ORGANIZATION_ID": "snet",
-   "SERVICE_ID": "emotion-recognition-service",
+   "SERVICE_ID": "named-entity-disambiguation",
    "PAYMENT_CHANNEL_STORAGE_SERVER": {
 	    "id": "storage-kovan",
 	    "host": "127.0.0.1",
