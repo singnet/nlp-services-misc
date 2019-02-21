@@ -23,8 +23,8 @@ class NamedEntityDisambiguation:
             self.logger.error('File not found')
 
     def named_entity_disambiguation(self, text):
-        named_entities, _big_final_dict = self._candidate_generation()
         self.text = text
+        named_entities, _big_final_dict = self._candidate_generation()
         entities = []
         if _big_final_dict is not None:
             entities = self._candidate_ranking(_big_final_dict)
