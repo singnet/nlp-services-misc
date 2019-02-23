@@ -13,14 +13,14 @@
     "groups": [
         {
             "group_name": "default_group",
-            "group_id": "U5kTNx63MDU8IcNsAY82+mpx1CykoxtLd4cwLw5Z8io",
+            "group_id": "U5kTNx63MDU8IcNsAY82+mpx1CykoxtLd4cwLw5Z8io=",
             "payment_address": "0xd708A068F606893120eA34eECe8a2f7448Fca764"
         }
     ],
     "endpoints": [
         {
             "group_name": "default_group",
-            "endpoint": "http://159.69.56.49:8006"
+            "endpoint": "https://tz-services-1.snet.sh:8006"
         }
     ],
     "service_description": {
