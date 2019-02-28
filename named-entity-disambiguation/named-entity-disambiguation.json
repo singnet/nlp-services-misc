@@ -1,0 +1,30 @@
+{
+    "version": 1,
+    "display_name": "Named Entity Disambiguation",
+    "encoding": "proto",
+    "service_type": "grpc",
+    "payment_expiration_threshold": 40320,
+    "model_ipfs_hash": "QmZxHjAwdzVs7Q6zwee7wfbZDHcyFnsYeWG9wRpw4f2k2y",
+    "mpe_address": "0x7E6366Fbe3bdfCE3C906667911FC5237Cc96BD08",
+    "pricing": {
+        "price_model": "fixed_price",
+        "price_in_cogs": 1
+    },
+    "groups": [
+        {
+            "group_name": "default_group",
+            "group_id": "f+j3dUTDu2WyDCDs+xzG5uHjK8p8CRffdcen6So5DaM=",
+            "payment_address": "0xf472a171dc35fD30a2462dD5CDCF5F39b26dc390"
+        }
+    ],
+    "endpoints": [
+        {
+            "group_name": "default_group",
+            "endpoint": "https://tz-services-1.snet.sh:8016"
+        }
+    ],
+    "service_description": {
+        "url": "https://singnet.github.io/nlp-services-misc/users_guide/named-entity-disambiguation-service.html",
+        "description": "Returns the disambiguration of a named-entities in a given sentece using wiki disambiguation links and redirects"
+    }
+}

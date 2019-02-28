@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-snet_daemon_v=0.1.6
+snet_daemon_v=0.1.7
 
 if [ ! -d snet-daemon-v$snet_daemon_v ] ; then
 	echo "Downloading snetd-linux"
@@ -13,5 +13,5 @@ fi
 
 python3.6 -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. service_spec/LanguageDetection.proto
 
-cp snet.config.example.kovan snet.config.example.kovan.json
+cp snet.config.example.mainnet snet.config.example.mainnet.json
 cp snet.config.example.ropsten snet.config.example.ropsten.json
