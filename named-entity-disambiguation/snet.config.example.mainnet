@@ -10,7 +10,7 @@
    "ssl_cert": "/etc/letsencrypt/live/tz-services-1.snet.sh/fullchain.pem",
    "ssl_key": "/etc/letsencrypt/live/tz-services-1.snet.sh/privkey.pem",
    "PAYMENT_CHANNEL_STORAGE_SERVER": {
-	    "id": "storage-mainet",
+	    "id": "storage-mainnet",
 	    "host": "127.0.0.1",
 	    "client_port": 2379,
 	    "peer_port": 2380,
