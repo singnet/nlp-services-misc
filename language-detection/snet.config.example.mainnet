@@ -6,7 +6,7 @@
    "PASSTHROUGH_ENABLED": true,
    "PASSTHROUGH_ENDPOINT": "http://localhost:8001",
    "ORGANIZATION_ID": "snet",
-   "SERVICE_ID": "language-detection-service",
+   "SERVICE_ID": "language-detection",
    "ssl_cert": "/etc/letsencrypt/live/tz-services-1.snet.sh/fullchain.pem",
    "ssl_key": "/etc/letsencrypt/live/tz-services-1.snet.sh/privkey.pem",
    "PAYMENT_CHANNEL_STORAGE_SERVER": {
