@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-snet_daemon_v=0.1.7
+snet_daemon_v=0.1.8
 
 if [ ! -d snet-daemon-v$snet_daemon_v ] ; then
 	echo "Downloading snetd-linux"
@@ -14,7 +14,6 @@ fi
 
 
 # Create dictionary for the available service.
-#mkdir output
 python3.6 service/dictionary_creator.py
 python3.6 -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. service_spec/NamedEntityDisambiguation.proto
 

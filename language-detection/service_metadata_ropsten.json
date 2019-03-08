@@ -1,6 +1,6 @@
 {
     "version": 1,
-    "display_name": "language-detection-service",
+    "display_name": "language-detection",
     "encoding": "proto",
     "service_type": "grpc",
     "payment_expiration_threshold": 40320,
