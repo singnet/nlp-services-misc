@@ -6,7 +6,7 @@ if [ ! -d models/ ]; then
     mkdir models
     wget https://s3-us-west-2.amazonaws.com/allennlp/models/coref-model-2018.02.05.tar.gz -O models/coref-model-2018.02.05.tar.gz
 fi
-python -m spacy download en_core_web_sm
+python3.6 -m spacy download en_core_web_sm
 
 # apt install tar
 if [ ! -d snet-daemon-v$snet_daemon_v ] ; then
