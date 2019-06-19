@@ -2,7 +2,7 @@ from service_spec.CoreferenceResolutionService_pb2 import InputSentence, Referen
 from service_spec.CoreferenceResolutionService_pb2_grpc import ResolveReferenceServicer, \
     add_ResolveReferenceServicer_to_server, ResolveReferenceStub
 import unittest
-import service_provider
+import start_service
 import grpc
 from google.protobuf.json_format import MessageToJson, MessageToDict
 
@@ -41,7 +41,7 @@ class TestSuiteGrpc(unittest.TestCase):
         self.port = "8001"
         self.result = []
 
-        self.server = service_provider.create_server(self.port)
+        self.server = start_service.create_server(self.port)
         self.server.start()
 
     def test_grpc_call(self):

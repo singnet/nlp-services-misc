@@ -1,7 +1,7 @@
 from service_spec.NamedEntityDisambiguation_pb2 import Input, Output
 from service_spec.NamedEntityDisambiguation_pb2_grpc import DisambiguateStub
 import unittest
-import service_provider
+import start_service
 import grpc
 from google.protobuf.json_format import MessageToDict
 
@@ -15,7 +15,7 @@ class TestSuiteGrpc(unittest.TestCase):
         self.port = "8006"
         self.result = []
 
-        self.server = service_provider.create_server(self.port)
+        self.server = start_service.create_server(self.port)
         self.server.start()
 
     def test_grpc_call(self):
