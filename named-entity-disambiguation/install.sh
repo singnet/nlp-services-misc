@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-snet_daemon_v=0.1.8
+snet_daemon_v=1.0.0
 
 if [ ! -d snet-daemon-v$snet_daemon_v ] ; then
 	echo "Downloading snetd-linux"

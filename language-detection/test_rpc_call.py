@@ -1,7 +1,7 @@
 from service_spec.LanguageDetection_pb2_grpc import LanguageDetectStub
 from service_spec.LanguageDetection_pb2 import Input, Output
 import unittest
-import start_service
+#import start_service
 import grpc
 from google.protobuf.json_format import MessageToDict
 from google.protobuf.text_format import MessageToString
@@ -16,8 +16,8 @@ class TestSuiteGrpc(unittest.TestCase):
         self.port = "8005"
         self.result = []
 
-        self.server = start_service.create_server(self.port)
-        self.server.start()
+        # self.server = start_service.create_server(self.port)
+        # self.server.start()
 
     def test_grpc_call(self):
         with grpc.insecure_channel('localhost:' + self.port) as channel:
@@ -54,4 +54,5 @@ class TestSuiteGrpc(unittest.TestCase):
             print(response)
 
     def tearDown(self):
-        self.server.stop(0)
+        pass
+        #self.server.stop(0)
