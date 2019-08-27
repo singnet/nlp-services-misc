@@ -1,0 +1,23 @@
+{
+   "DAEMON_END_POINT": "0.0.0.0:8009",
+   "IPFS_END_POINT": "http://ipfs.singularitynet.io:80",
+   "PASSTHROUGH_ENABLED": true,
+   "PASSTHROUGH_ENDPOINT": "http://localhost:8001",
+   "ORGANIZATION_ID": "snet",
+   "free_call_signer_address":"0x3Bb9b2499c283cec176e7C707Ecb495B7a961ebf",
+   "blockchain_network_selected": "main",
+   "metering_end_point": "https://mainnet-marketplace.singularitynet.io/metering",
+   "pvt_key_for_metering": "d2d90f3567313d1680324d595ad8e8512964d9240a51b1d17c9f2c3c865c8ad0",
+   "SERVICE_ID": "language-detection",
+   "payent_channel_cert_path": "/ssl/client.pem",
+   "payent_channel_ca_path": "/ssl/ca.pem",
+   "payent_channel_key_path": "/ssl/client-key.pem",
+   "ssl_cert": "/etc/letsencrypt/live/tz-services-1.snet.sh/fullchain.pem",
+   "ssl_key": "/etc/letsencrypt/live/tz-services-1.snet.sh/privkey.pem",
+   "LOG": {
+       "LEVEL": "debug",
+       "OUTPUT": {
+              "TYPE": "stdout"
+           }
+   }
+}
