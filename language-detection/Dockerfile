@@ -32,7 +32,8 @@ RUN ./install.sh
 
 EXPOSE 8020
 EXPOSE 8010
+EXPOSE 8009
 
 RUN python3.6 -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. service_spec/LanguageDetection.proto
 
-CMD ["python3.6", "run-snet-service.py","--daemon-config-path-mainnet","snet.config.example.mainnet.json","--daemon-config-path-ropsten","snet.config.example.ropsten.json"]
+CMD ["python3.6", "run-snet-service.py","--daemon-config-path-mainnet","snet.config.example.mainnet.json","--daemon-config-path-mainnet_2","snet.config.example.mainnet_2.json","--daemon-config-path-ropsten","snet.config.example.ropsten.json"]
