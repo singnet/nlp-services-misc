@@ -51,5 +51,6 @@ RUN ./install.sh
 EXPOSE 8016
 EXPOSE 8006
 EXPOSE 8005
+EXPOSE 8032
 
-CMD ["python3.6", "run-snet-service.py","--daemon-config-path-mainnet","snet.config.example.mainnet.json","--daemon-config-path-mainnet_2", "snet.config.example.mainnet_2.json", "--daemon-config-path-ropsten","snet.config.example.ropsten.json"]
+CMD ["python3.6", "run-snet-service.py","--daemon-config-path-mainnet","snet.config.example.mainnet.json","--daemon-config-path-mainnet_2", "snet.config.example.mainnet_2.json",  "--daemon-config-path-mainnet-3","snet.config.example.mainnet-3.json", "--daemon-config-path-ropsten","snet.config.example.ropsten.json"]
