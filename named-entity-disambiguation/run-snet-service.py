@@ -14,7 +14,7 @@ def main():
     parser.add_argument("--daemon-config-path-ropsten", help="Path to daemon configuration file for ropsten",
                         required=True)
     args = parser.parse_args(sys.argv[1:])
-    daemons = {'mainnet':args.daemon_config_path_mainnet, 'mainnet_2':args.daemon_config_path_mainnet_2, 'ropsten':args.daemon_config_path_ropsten}
+    daemons = {'mainnet':args.daemon_config_path_mainnet, 'mainnet_2':args.daemon_config_path_mainnet_2, 'mainnet_3':args.daemon_config_path_mainnet_3, 'ropsten':args.daemon_config_path_ropsten}
     snetd_p = []
 
     def handle_signal(signum, frame):
