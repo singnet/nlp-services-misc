@@ -9,9 +9,9 @@
    "SERVICE_ID": "language-detection",
    "ssl_cert": "/etc/letsencrypt/live/tz-services-1.snet.sh/fullchain.pem",
    "ssl_key": "/etc/letsencrypt/live/tz-services-1.snet.sh/privkey.pem",
-   "payment_channel_cert_path": "/etc/letsencrypt/live/tz-services-1.snet.sh/client.pem",
-   "payment_channel_ca_path": "/etc/letsencrypt/live/tz-services-1.snet.sh/ca.pem",
-   "payment_channel_key_path": "/etc/letsencrypt/live/tz-services-1.snet.sh/client-key.pem",
+   "payment_channel_cert_path": "/ssl/client.pem",
+   "payment_channel_ca_path": "/ssl/ca.pem",
+   "payment_channel_key_path": "/ssl/client-key.pem",
    "metering_end_point": "https://mainnet-marketplace.singularitynet.io",
    "pvt_key_for_metering": "d2d90f3567313d1680324d595ad8e8512964d9240a51b1d17c9f2c3c865c8ad0",
    "LOG": {
