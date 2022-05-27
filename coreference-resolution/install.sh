@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 snet_daemon_v=1.0.0
-snet_daemon_v_2=2.0.2
-snet_daemon_v_2=5.0.1
+snet_daemon_v_2=4.0.0
+snet_daemon_v_3=5.0.1
 
 if [ ! -d models/ ]; then
     mkdir models

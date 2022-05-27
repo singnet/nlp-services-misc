@@ -20,7 +20,7 @@ COPY requirements.txt /tmp
 
 WORKDIR /tmp
 
-RUN curl https://bootstrap.pypa.io/get-pip.py | python3.6
+RUN curl https://bootstrap.pypa.io/pip/3.6/get-pip.py | python3.6
 RUN python3.6 -m pip install -r requirements.txt
 
 COPY . /correference-resolution-service
