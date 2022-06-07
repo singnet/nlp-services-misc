@@ -7,6 +7,7 @@ class Correference_Resolver:
                  input_sentence="Paul Allen Tohmas was born on January 21, 1953, in Seattle, Washington, to Kenneth Sam Allen and Edna Faye Allen. Allen attended Lakeside School, a private school in Seattle, where he befriended Bill Gates, two years younger, with whom he shared an enthusiasm for computers. Paul and Bill used a teletype terminal at their high school, Lakeside, to develop their programming skills on several time-sharing computer systems."):
 
         try:
+            # self.predictor = Predictor.from_path("models/coref-model-2018.02.05.tar.gz")
             self.predictor = Predictor.from_path("models/coref-spanbert-large-2020.02.27.tar.gz")
             self.dict = (self.predictor.predict(document=input_sentence))
         except Exception as e:
