@@ -1,5 +1,6 @@
-allennlp==0.8.1
-spacy
+allennlp==1.0.0
+allennlp_models==1.0.0
+spacy==2.2.4
 protobuf
 grpcio
 grpcio-tools
